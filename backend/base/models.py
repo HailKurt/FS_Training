@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 # Create your models here.
 class Product(models.Model):
     product_id = models.AutoField(primary_key=True)
@@ -10,6 +11,7 @@ class Product(models.Model):
     description = models.TextField()
     countInStock = models.IntegerField()
     image = models.ImageField(upload_to='product_images/')
+    createdAt = models.DateField(auto_now_add=True)
 
     def __str__(self):
         return f"Product Name: {self.product_name} | Available Stock: {self.countInStock}"
@@ -21,7 +23,6 @@ class CartUser(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     qty = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
-
 
     def __str__(self):
         return f'{self.user.username} - {self.product.product_name} x {self.qty}'
@@ -62,3 +63,4 @@ class ShippingAddress(models.Model):
 
     def __str__(self):
         return f'{self.full_name} - {self.address}'
+    

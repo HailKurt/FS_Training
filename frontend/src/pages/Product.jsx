@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import GuideShop from "../components/GuideShop";
+import ProductList from "../components/ProductList";
 
-const Product = () => {
+const Products = () => {
   return (
-    <div>Products Page 2</div>
-  )
-}
+    <div>
+      <GuideShop />
+      <ProductList />
+    </div>
+  );
+};
 
-export default Product
+export default Products;

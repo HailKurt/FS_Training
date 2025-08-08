@@ -27,12 +27,12 @@ const Header = () => {
             Team
           </Link>
         </nav>
-        <button className="border border-blue-900 text-blue-900 px-4 py-1 rounded-full hover:bg-blue-50 text-sm">
+        <Link to="/register" className="border border-blue-900 text-blue-900 px-4 py-1 rounded-full hover:bg-blue-50 text-sm">
           Register
-        </button>
-        <button className="bg-blue-900 text-white px-4 py-1 rounded-full hover:bg-blue-800 text-sm">
+        </Link>
+        <Link to="/login" className="bg-blue-900 text-white px-4 py-1 rounded-full hover:bg-blue-800 text-sm">
           Sign In
-        </button>
+        </Link>
       </div>
     </header>
   );
